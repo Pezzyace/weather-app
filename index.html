@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- TAILWINDCSS LINK -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Weather App</title>
+</head>
+<body class="m-0 p-0 box-border font-['Poppins']">
+  <div class="flex h-28 shadow-md shadow-slate-300 bg-slate-900 items-center justify-center">
+    <h1 class="text-center text-white text-3xl font-bold">Weather Dashboard</h1>
+  </div>
+  <div class="mt-6 w-11/12 lg:w-8/12 m-auto container">
+    <div class="weather-input">
+      <h2 class="text-2xl mb-3 font-semibold">Enter City</h2>
+      <div class="flex flex-col sm:flex-row  gap-4 mb-4">
+        <input type="text" placeholder="E.g Abuja, New York..." class="border border-solid border-slate-600 outline-none p-4 w-full sm:w-9/12 rounded text-xl" id="cityInput">
+        
+        <button class="w-full sm:w-3/12 p-4 text-xl text-white bg-slate-600 rounded search-btn cursor-pointer border border-transparent border-solid hover:bg-transparent hover:border-slate-600 hover:text-slate-600 transition ease-in-out duration-500" id="searchBtn">Search</button>
+      </div>
+      <hr class="mb-4">
+    </div>
+    <div>
+
+      <div class="weather-data">
+        <div class="flex flex-col min-[440px]:flex-row gap-4 bg-slate-400 rounded py-6 md:px-16 px-8 items-center justify-between mb-6">
+          <div class="flex flex-col items-center">
+            <h4 class="text-2xl font-bold mb-px">London</h4>
+            <p>2023-06-19</p>
+          </div>
+          <div class="flex flex-col gap-4 min-[560px]:flex-row min-[560px]:gap-8 sm:gap-16 lg:gap-32 sm:justify-between">
+            <div class="flex flex-col items-center">
+              <h4>Temperature</h4>
+              <p class="text-2xl font-bold mb-px">19.10*C</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <h4>Wind</h4>
+              <p class="text-2xl font-bold mb-px">4.31 M/S</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <h4>Humidity</h4>
+              <p class="text-2xl font-bold mb-px">79%</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center relative">
+            <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="cloud" class="w-[8rem]">
+            <h4 class="absolute bottom-0">Moderate Rain</h4>
+          </div>
+        </div>
+
+        <!-- BOTTOM CARDS -->
+        <div class="days-forcast">
+          <h2 class="text-2xl mb-3 font-semibold">4-Days Forecast</h2>
+          
+          <div class="grid grid-cols-1 items-center mb-4 justify-center min-[440px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 weather-cards">
+
+            <div class="bg-slate-400 rounded p-3 card">
+              <div class="border border-dashed border-2 border-slate-900 rounded p-4">
+                <div class="text-center font-bold">2023-06-24</div>
+                <div class="relative mb-4">
+                  <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="cloud" class="w-[5rem] m-auto">
+                  <h4 class="text-center">Moderate Rain</h4>
+                </div>
+                <div class="flex justify-between mb-2">
+                  <h4>Temp -</h4>
+                  <p class="text-xl font-bold mb-px">19.10*C</p>
+                </div>
+                <div class="flex justify-between  mb-2">
+                  <h4>Wind -</h4>
+                  <p class="text-xl font-bold mb-px">4.31 M/S</p>
+                </div>
+                <div class="flex justify-between ">
+                  <h4>Humidity -</h4>
+                  <p class="text-xl font-bold mb-px">79%</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-slate-400 rounded p-3 card">
+              <div class="border border-dashed border-2 border-slate-900 rounded p-4">
+                <div class="text-center font-bold">2023-06-24</div>
+                <div class="relative mb-4">
+                  <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="cloud" class="w-[5rem] m-auto">
+                  <h4 class="text-center">Moderate Rain</h4>
+                </div>
+                <div class="flex justify-between mb-2">
+                  <h4>Temp -</h4>
+                  <p class="text-xl font-bold mb-px">19.10*C</p>
+                </div>
+                <div class="flex justify-between  mb-2">
+                  <h4>Wind -</h4>
+                  <p class="text-xl font-bold mb-px">4.31 M/S</p>
+                </div>
+                <div class="flex justify-between ">
+                  <h4>Humidity -</h4>
+                  <p class="text-xl font-bold mb-px">79%</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-slate-400 rounded p-3 card">
+              <div class="border border-dashed border-2 border-slate-900 rounded p-4">
+                <div class="text-center font-bold">2023-06-24</div>
+                <div class="relative mb-4">
+                  <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="cloud" class="w-[5rem] m-auto">
+                  <h4 class="text-center">Moderate Rain</h4>
+                </div>
+                <div class="flex justify-between mb-2">
+                  <h4>Temp -</h4>
+                  <p class="text-xl font-bold mb-px">19.10*C</p>
+                </div>
+                <div class="flex justify-between  mb-2">
+                  <h4>Wind -</h4>
+                  <p class="text-xl font-bold mb-px">4.31 M/S</p>
+                </div>
+                <div class="flex justify-between ">
+                  <h4>Humidity -</h4>
+                  <p class="text-xl font-bold mb-px">79%</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-slate-400 rounded p-3 card">
+              <div class="border border-dashed border-2 border-slate-900 rounded p-4">
+                <div class="text-center font-bold">2023-06-24</div>
+                <div class="relative mb-4">
+                  <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="cloud" class="w-[5rem] m-auto">
+                  <h4 class="text-center">Moderate Rain</h4>
+                </div>
+                <div class="flex justify-between mb-2">
+                  <h4>Temp -</h4>
+                  <p class="text-xl font-bold mb-px">19.10*C</p>
+                </div>
+                <div class="flex justify-between  mb-2">
+                  <h4>Wind -</h4>
+                  <p class="text-xl font-bold mb-px">4.31 M/S</p>
+                </div>
+                <div class="flex justify-between ">
+                  <h4>Humidity -</h4>
+                  <p class="text-xl font-bold mb-px">79%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
